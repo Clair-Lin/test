@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/Home.vue" }
+    ],
+    "routes": [
+      {
+        "src": "/assets/(.*)",
+        "headers": {
+          "Cache-Control": "public, max-age=31536000, immutable"
+        }
+      }
+    ]
+  }
