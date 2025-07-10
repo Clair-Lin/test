@@ -2,12 +2,12 @@
   <div class="login-container">
     <h2>登录</h2>
     <form @submit.prevent="handleLogin">
-      <div>
-        <label>用户名：</label>
+      <div class="form-row">
+        <label class="form-label">用户名：</label>
         <input v-model="username" required />
       </div>
-      <div>
-        <label>密码：</label>
+      <div class="form-row">
+        <label class="form-label">密码：</label>
         <input type="password" v-model="password" required />
       </div>
       <button type="submit">登录</button>
@@ -32,7 +32,6 @@ function handleLogin() {
   }
   // 模拟权限判断
   const role = username.value === 'admin' ? 'admin' : 'user'
-  // 简单存储到 sessionStorage，实际项目可用全局状态管理
   sessionStorage.setItem('role', role)
   sessionStorage.setItem('username', username.value)
   router.push('/')
@@ -53,13 +52,21 @@ function handleLogin() {
   text-align: center;
   margin-bottom: 24px;
 }
-.login-container label {
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.form-label {
   display: inline-block;
   width: 60px;
+  text-align: right;
+  margin-right: 8px;
+  white-space: nowrap;
 }
 .login-container input {
-  width: 200px;
-  margin-bottom: 16px;
+  flex: 1;
+  min-width: 0;
   padding: 6px 8px;
 }
 button {

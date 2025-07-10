@@ -40,8 +40,8 @@ function renderChart() {
         rotate: 0,
         lineHeight: 18,
         formatter: function(value) {
-          // 每7字符换行，适配更长项目名
-          return value.length > 7 ? value.replace(/(.{7})/g, '$1\n') : value
+          // 每8字符换行，适配更长项目名
+          return value.length > 8 ? value.replace(/(.{7})/g, '$1\n') : value
         },
         margin: 16
       }
