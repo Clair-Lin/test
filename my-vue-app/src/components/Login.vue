@@ -34,7 +34,7 @@ function handleLogin() {
   const role = username.value === 'admin' ? 'admin' : 'user'
   sessionStorage.setItem('role', role)
   sessionStorage.setItem('username', username.value)
-  router.push('/')
+  router.push('/home')
 }
 </script>
 

@@ -5,10 +5,9 @@ const Login = () => import('./components/Login.vue')
 const Home = () => import('./components/Home.vue')
 
 const routes = [
+  { path: '/', component: Login },
   { path: '/login', component: Login },
-  { path: '/', component: Home },
-  // 添加通配符路由
-  { path: '/:pathMatch(.*)*', redirect: '/' }
+  { path: '/home', component: Home }
 ]
 
 const router = createRouter({
