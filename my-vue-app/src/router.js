@@ -6,7 +6,7 @@ const Home = () => import('./components/Home.vue')
 
 const routes = [
   { path: '/login', component: Login },
-  { path: '/', component: Home }
+  { path: '/', component: Home },
   // 添加通配符路由
   { path: '/:pathMatch(.*)*', redirect: '/' }
 ]
